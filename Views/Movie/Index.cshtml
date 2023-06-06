@@ -1,0 +1,18 @@
+﻿@model ASP.NET.Models.RandomMovieViewModel
+@{
+    ViewData["Title"] = Model.Movie.Title;
+}
+<h2>@Model.Movie.Title</h2>
+@if (Model.Customers.Count == 0)
+{
+	<p> No one has rented this movie before</p>
+}
+else
+{
+	<ul>
+		@foreach (var customer in Model.Customers)
+		{
+			<li>@customer.name</li>
+		}
+	</ul>
+}

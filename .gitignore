@@ -1,0 +1,54 @@
+# ASP.NET Core
+bin/
+obj/
+
+# Visual Studio Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nuget.props
+*.nuget.targets
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+AnyCPU/
+*.exe
+*.dll
+*.pdb
+*.dll.config
+*.projguid
+*.tlog
+*.zip
+*.rar
+*.7z
+*.log
+*.vsix
+*.nupkg
+*.pfx
+*.snk
+*.bak
+*.cache
+*.nupkg
+# Build directories
+*_ReSharper*/
+*_Resharper*/
+_ReSharper*/
+ReSharper*/
+_ReSharper.*/
+*.sw?
+*.bak
+*.userosscache
+*.pidb
+*.dbmdl
