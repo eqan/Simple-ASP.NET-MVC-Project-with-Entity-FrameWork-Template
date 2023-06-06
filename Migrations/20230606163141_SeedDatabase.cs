@@ -14,7 +14,7 @@ namespace ASP.NET.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Customers",
-                columns: new[] { "Id", "name" },
+                columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
                     { 1, "John Doe" },

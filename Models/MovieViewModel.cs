@@ -2,9 +2,10 @@
 
 namespace ASP.NET.Models
 {
-    public class RandomMovieViewModel
+    public class MovieViewModel
     {
         public Movie Movie { get; set; }
+        public Genre Genre { get; set; }
         public List<Customer> Customers
         {
             get;

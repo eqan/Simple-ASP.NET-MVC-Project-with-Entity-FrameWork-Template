@@ -5,6 +5,6 @@ namespace ASP.NET.Models
     public class Customer: BaseEntity
     {
         [Required]
-        public string name { get; set; }
+        public string Name { get; set; }
     }
 }

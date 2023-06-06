@@ -1,18 +1,29 @@
-﻿@model ASP.NET.Models.RandomMovieViewModel
-@{
-    ViewData["Title"] = Model.Movie.Title;
-}
-<h2>@Model.Movie.Title</h2>
-@if (Model.Customers.Count == 0)
-{
-	<p> No one has rented this movie before</p>
-}
-else
-{
-	<ul>
-		@foreach (var customer in Model.Customers)
-		{
-			<li>@customer.name</li>
-		}
-	</ul>
-}
+﻿@model List<ASP.NET.Models.Movie>
+
+<h2>Movies</h2>
+
+<p>
+	<a asp-controller="Movie" asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>Title</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var movie in Model)
+	{
+		<tr>
+			<td>@movie.Title</td>
+			<td>
+				<a asp-controller="Movie" asp-action="Edit" asp-route-id="@movie.Id">Edit</a> |
+				<a asp-controller="Movie" asp-action="Details" asp-route-id="@movie.Id">Details</a> |
+				<a asp-controller="Movie" asp-action="Delete" asp-route-id="@movie.Id">Delete</a>
+			</td>
+		</tr>
+	}
+	</tbody>
+</table>

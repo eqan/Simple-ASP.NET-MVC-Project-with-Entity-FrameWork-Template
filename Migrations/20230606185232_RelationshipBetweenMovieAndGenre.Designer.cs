@@ -3,6 +3,7 @@ using ASP.NET.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230606185232_RelationshipBetweenMovieAndGenre")]
+    partial class RelationshipBetweenMovieAndGenre
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -99,10 +102,6 @@ namespace ASP.NET.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("GenreId")
                         .HasColumnType("int");
 
@@ -126,14 +125,12 @@ namespace ASP.NET.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "Someone",
                             GenreId = 1,
                             Title = "Movie 1"
                         },
                         new
                         {
                             Id = 2,
-                            Description = "Someone",
                             GenreId = 2,
                             Title = "Movie 2"
                         });
